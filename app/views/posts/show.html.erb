@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div id = "paragh-content">
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+</div>
+
+<div>
+<%= link_to 'Edit', edit_post_path(@post),class: "show-tags" %> |
+<%= link_to 'Back', posts_path,class: "show-tags" %>
+</div>
