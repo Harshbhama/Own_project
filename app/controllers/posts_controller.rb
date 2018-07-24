@@ -10,6 +10,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @image = Image.new
+    @abc = Image.all
   end
 
   # GET /posts/new

@@ -5,9 +5,40 @@
   <strong>Content:</strong>
   <%= @post.content %>
 </p>
+
 </div>
+	<% if user_signed_in? %>
+	<div>
+		
+			<%= form_for @image,html: { multipart: true }, remote:false do |f| %>
+
+				<%= f.label :image %>
+				<%= f.file_field :avatar %>
+
+				<%= f.hidden_field :post_id, value: @post.id%>
+
+				<%= f.submit %>
+
+				<% end %>
+
+	</div>
+	<% end %>
+	
+	<div id = "image-parent-style">
+
+		<% @post.images.each do |img| %>
+  		<%= image_tag img.avatar.url, id:"image-style" %>
+		<% end %>
+		
+
+	</div>
 
 <div>
-<%= link_to 'Edit', edit_post_path(@post),class: "show-tags" %> |
+	<% if user_signed_in? %>
+<% if current_user.id == @post.user_id %>
+<%= link_to 'Edit', edit_post_path(@post),class: "show-tags" %> 
+<% end %>
+<% end %>
+
 <%= link_to 'Back', posts_path,class: "show-tags" %>
 </div>
