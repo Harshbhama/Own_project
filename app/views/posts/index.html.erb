@@ -1,9 +1,21 @@
+<header>
+<nav>
+<ul id = "horizontal-list">
+  <li>ABOUT</li>
+  <li>CONTACT US</li>
+  <li>LINKS</li>
+  <li>PRIVACY POLICY</li>
+  <li>ADVERTISE</li>
+</ul>
+</nav>
+</header>
+
 <main id = "posts-index">
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
 <% if user_signed_in? ==false%>
-<%=link_to 'Sign-in', '/users/sign_in' %>
+<%=link_to 'Sign-in', '/users/sign_in', class:"sign-in-post-style" %>
 <% end %>
 
   
@@ -36,6 +48,6 @@
 
 <br>
 <% if user_signed_in? %>
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: "sign-in-post-style" %>
 <% end %>
 </main>

@@ -2,6 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+header{
+	margin-top: -33px;
+    margin-left: -33px;
+    margin-right: -33px;
+		nav{
+			background-image: url(horizonatal-nav.jpg);
+			background-size: auto;
+		    background-position: center;
+			margin: 0;
+			height: 34px;
+
+			#horizontal-list{
+
+				list-style: none;
+				text-align: center;
+				display: flex;
+			    flex-direction: row;
+			    justify-content: space-around;
+			    	li{
+			    		color: white;	
+			    	}
+
+			}
+		}
+}
+
+
+
+
+
+
+
+
+
 
 #posts-index{
 	
@@ -39,4 +73,7 @@
 #image-parent-style{
 	
 	    margin-top: 17px;
+}
+.sign-in-post-style{
+	color: black;
 }
