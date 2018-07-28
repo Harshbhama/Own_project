@@ -66,8 +66,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'localhost:3000',
-    user_name:            'alchemy.cn18',
-    password:             'codingninjas',
+    user_name:            'harshbhama96',
+    password:             'harsh19971997',
     authentication:       'plain',
     enable_starttls_auto: true 
   }

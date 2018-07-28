@@ -7,7 +7,7 @@ header{
     margin-left: -33px;
     margin-right: -33px;
 		nav{
-			background-image: url(horizonatal-nav.jpg);
+			background-image: url(hor1.jpg);
 			background-size: auto;
 		    background-position: center;
 			margin: 0;
@@ -40,6 +40,7 @@ header{
 #posts-index{
 	
 	text-align: center;
+
 	    
 			}
 
@@ -47,11 +48,14 @@ header{
 	
 	position: fixed;
     top: 34%;
+     a{color: white;}
+		
+		color: white;
 		}
 #material-links{
 	
 	    padding-top: 16px;
-	     a{color: black;}
+	    
 
 }
 
@@ -62,6 +66,7 @@ header{
 #paragh-content{
 	
 	    padding-top: 18px;
+	    color: white;
 }
 .show-tags{
 	color: black;
@@ -75,5 +80,18 @@ header{
 	    margin-top: 17px;
 }
 .sign-in-post-style{
-	color: black;
+	color: white;
+}
+
+.new-post-style{
+	
+		color: white;
+}
+
+.edit-post-style{
+	
+		color: white;
+}
+.title-style{
+	color: white;
 }
