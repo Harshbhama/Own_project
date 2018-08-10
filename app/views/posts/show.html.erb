@@ -8,6 +8,7 @@
 
 </div>
 	<% if user_signed_in? %>
+	<% if current_user.id == @post.user_id %>
 	<div>
 		
 			<%= form_for @image,html: { multipart: true }, remote:false do |f| %>
@@ -23,15 +24,66 @@
 
 	</div>
 	<% end %>
+	<% end %>
 	
 	<div id = "image-parent-style">
 
 		<% @post.images.each do |img| %>
   		<%= image_tag img.avatar.url, id:"image-style" %>
+  		<% if user_signed_in? %>
+		<% if current_user.id == @post.user_id %>
+  		<%= link_to "image-delete", images_delete_path(img), method: :delete %>
+  		<% end %>
+  		<% end %>
 		<% end %>
 		
 
 	</div>
+
+	<div id = "comment-style">
+	<% if user_signed_in? %>
+
+			<%= form_for @comment do |f| %>
+
+				<%= f.label :content %>
+				<%= f.text_field :content %>
+
+				<%= f.hidden_field :post_id, value: @post.id %>
+				<%= f.submit %>
+			<% end %>
+
+	<% end %>
+	
+	</div>
+
+	
+
+	<div id = "comment-list-style">
+		<div id = "comment-heading-style">
+			<p> Comments </p>
+		</div>
+
+		<% @post.comments.reverse.each do |comment| %>
+		
+		<%= comment.content %>----<%= comment.user.email %>
+		<% if user_signed_in? %>
+		<% if current_user.id == @post.user_id %>
+		<%= link_to "delete", comments_delete_path(comment), method: :delete %>
+		<% end %>
+		<% end %>
+		<br>
+		<% end %>
+
+		
+
+		
+
+	</div>
+
+
+
+
+
 
 <div>
 	<% if user_signed_in? %>

@@ -27,8 +27,9 @@
 
   <div id = "material">
     <% @posts.each do |post| %>
-     
-        <%= post.title %>
+      
+        <div id = "post-title-style">
+        <%= post.title %>--- <%= post.user.email %>
         <br>
         <div id = "material-links">
         <%= link_to 'Show', post, class: 'edit-link'  %>
@@ -38,6 +39,7 @@
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' },class: 'edit-link' %>
         <% end %>
         <% end %>
+        </div>
         </div>
     
     <% end %>

@@ -46,6 +46,7 @@ header{
 
 #material{
 	
+	display: flex;
 	position: fixed;
     top: 34%;
      a{color: white;}
@@ -57,6 +58,9 @@ header{
 	    padding-top: 16px;
 	    
 
+}
+#post-title-style{
+	padding-right: 14px;
 }
 
 .edit-link{
@@ -95,3 +99,82 @@ header{
 .title-style{
 	color: white;
 }
+#new_comment{
+		    margin-left: 42%;
+
+	label{
+
+	display: flex;
+    padding-left: 62px;
+	}
+	
+	display: flex;
+    flex-direction: column;
+    text-align: center;
+    #comment_content{
+
+    display: flex;
+    justify-content: center;
+    width: 22%;
+    border-radius: 11px;
+  
+    }
+
+    input[type="submit"]{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 23%;
+    border-radius: 19px;
+    margin-top: 5px;
+
+
+    }
+
+}
+#comment-list-style{
+
+	display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+
+    margin-top: 14px;
+    margin-left: 39%;
+    /* border-style: solid; */
+    margin-right: 41%;
+    border-left: 2px dashed;
+    border-right: 2px dashed;
+    display: flex;
+    justify-content: center;
+
+
+    }
+    #comment-heading-style{
+    padding-left: 71px;
+    
+    font-size: 16px;
+    
+    }
+
+    #post_content{
+
+    height: 104px;
+    width: 77%;
+    }
+
+    #new_image{
+
+    #image_avatar{
+
+    color: white;
+    margin-top: 8px;
+    }
+
+    label{
+
+    color: white;
+    }
+
+    }
+ 

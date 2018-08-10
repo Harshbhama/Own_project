@@ -12,6 +12,8 @@ class PostsController < ApplicationController
   def show
     @image = Image.new
     @abc = Image.all
+    @comment = Comment.new
+    @comments = Comment.all
   end
 
   # GET /posts/new
