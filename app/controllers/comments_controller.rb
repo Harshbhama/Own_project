@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+	before_action :authenticate_user!, only: [:create, :destroy]
 	def create
 
 		comment = Comment.create(content: params[:comment][:content], post_id: params[:comment][:post_id], user_id: current_user.id);

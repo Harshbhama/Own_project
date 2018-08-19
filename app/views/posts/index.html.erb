@@ -30,6 +30,10 @@
       
         <div id = "post-title-style">
         <%= post.title %>--- <%= post.user.email %>
+        
+        <div>
+          <%= image_tag post.avatar.url, id:"image-title-style" %>
+        </div>
         <br>
         <div id = "material-links">
         <%= link_to 'Show', post, class: 'edit-link'  %>
@@ -41,6 +45,7 @@
         <% end %>
         </div>
         </div>
+        
     
     <% end %>
 

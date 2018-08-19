@@ -1,6 +1,6 @@
 <h1 class = "new-post-style">New Post</h1>
 
-<%=form_for @post do |f| %>
+<%=form_for @post, html: { multipart: true } do |f| %>
 
 	<%= f.label :title, class: "new-post-style" %>
 	<%= f.text_area :title %>
@@ -8,6 +8,11 @@
 	<br>
 	<%= f.label :content, class: "new-post-style" %>
 	<%= f.text_area :content %>
+
+	<br>
+
+	<%= f.label :image %>
+	<%= f.file_field :avatar %>
 
 	<%= f.submit %>
 	<% end %>

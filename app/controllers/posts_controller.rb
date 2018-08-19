@@ -31,8 +31,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     
-    @post = Post.new(content: params[:post][:content],
-      title: params[:post][:title]);
+    @post = Post.new(post_params);
     @post.user_id = current_user.id;
 
 
@@ -79,6 +78,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:content)
+      params.require(:post).permit(:content, :title, :avatar)
     end
 end

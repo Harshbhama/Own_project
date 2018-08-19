@@ -41,8 +41,7 @@
 	</div>
 
 	<div id = "comment-style">
-	<% if user_signed_in? %>
-
+	
 			<%= form_for @comment do |f| %>
 
 				<%= f.label :content %>
@@ -52,7 +51,7 @@
 				<%= f.submit %>
 			<% end %>
 
-	<% end %>
+	
 	
 	</div>
 
