@@ -32,6 +32,7 @@ class PostsController < ApplicationController
   def create
     
     @post = Post.new(post_params);
+    @comment = Comment.new;
     @post.user_id = current_user.id;
 
 

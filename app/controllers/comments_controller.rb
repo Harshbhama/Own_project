@@ -2,9 +2,10 @@ class CommentsController < ApplicationController
 	before_action :authenticate_user!, only: [:create, :destroy]
 	def create
 
-		comment = Comment.create(content: params[:comment][:content], post_id: params[:comment][:post_id], user_id: current_user.id);
-
+		@comment = Comment.create(content: params[:comment][:content], post_id: params[:comment][:post_id], user_id: current_user.id);
+		UserMailer.new_comment(@comment.id).deliver_now
 		return redirect_to post_path(params[:comment][:post_id]);
+
 
 	end
 
@@ -16,6 +17,9 @@ class CommentsController < ApplicationController
 		redirect_to post_path(xyz);
 
 	end
+	
+	
+
 
 
 end
