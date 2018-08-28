@@ -45,7 +45,8 @@
         <% end %>
         </div>
         </div>
-        
+        <%= post.likes.length %>
+        <%= link_to post.user_like_string(current_user.id), toggle_like_path(post), method: :post %>
     
     <% end %>
 
